@@ -1,0 +1,73 @@
+<mxfile host="Electron" modified="2023-04-17T07:42:01.353Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="qWdvvf3AHA2Tu5K-AvH7" version="21.1.2" type="device">
+  <diagram name="第 1 页" id="4xjAWqCqZQAXoj54pfHQ">
+    <mxGraphModel dx="1098" dy="670" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m12ne2t8OxxA_lE06tAF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-1" target="m12ne2t8OxxA_lE06tAF-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-5" value="通过create函数返回" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" vertex="1" connectable="0" parent="m12ne2t8OxxA_lE06tAF-3">
+          <mxGeometry x="-0.0741" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-1" value="RenderPipelineAsset" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-2" target="m12ne2t8OxxA_lE06tAF-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-2" value="RenderPipeline" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-6" value="&lt;h1&gt;RenderPipelineAsset&lt;/h1&gt;&lt;div&gt;继承于接口类IRenderPipelineAsset&lt;/div&gt;&lt;div&gt;负责生成特定的RenderPipeline资源，和管理他们的生命周期（生成渲染的实例和设置无效时销毁已创建的管线）&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="290" width="470" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-7" value="&lt;h1&gt;RenderPipeline&lt;/h1&gt;&lt;div&gt;继承于抽象类IRenderPipeline&lt;/div&gt;&lt;div&gt;关于unity渲染的核心类，定义了一系列unity如何渲染帧的命令设设置&lt;/div&gt;&lt;div&gt;主要就是重写Render函数，在这个函数中定义一帧去怎么绘画&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="775" y="320" width="375" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-12" target="m12ne2t8OxxA_lE06tAF-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1385" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-12" target="m12ne2t8OxxA_lE06tAF-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-12" value="void Render" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="455" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-16" value="Camera[]" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="535" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-19" target="m12ne2t8OxxA_lE06tAF-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1700" y="407.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-19" value="ScriptableRenderContext" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="380" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-20" target="m12ne2t8OxxA_lE06tAF-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-20" value="&lt;h1&gt;ScriptableRenderContext&lt;/h1&gt;&lt;div&gt;和GPU链接的桥（类似）&lt;/div&gt;&lt;div&gt;在Render函数中调用这个对象的方法去定义管线的绘制&lt;/div&gt;&lt;div&gt;里面都是调用GPU绘画指令的函数，还有一些状态的函数&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="230" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-23" value="CommandBuffer" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="380" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-24" target="m12ne2t8OxxA_lE06tAF-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-24" value="&lt;h1&gt;CommandBuffer&lt;/h1&gt;&lt;div&gt;一个里面包含一系列要执行的图形命令的列表&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;可将保存的这些渲染命令列表设置各个点执行，例如摄像机渲染，和光源渲染执行等等，或者立即执行&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;一般的用来拓展管线的一些自定义做法&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="230" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-27" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;这两个关联性很大，但一个是和GPU通话的桥，一个是我们端写的一系列的命令列表容器，当我们在调用ExcuteCommandBuffer去做一个类似注册CommandBuffer的一个操作的时候，其实就是将我们CommandBuffer的一些例如DrawMesh，DrawRenderer这些命令去注入到ScriptableRenderContext中去执行，相当于我Context写了很多Draw的命令列表，Command也写了很多，然后我调用这个去注入，其实就是将CommandBuffer的命令换成Context的命令注入，两个很多Draw函数命名是可以对应的上的，然后再Submit给GPU提交&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="90" width="440" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
