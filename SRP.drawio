@@ -1,71 +1,164 @@
-<mxfile host="Electron" modified="2023-04-17T07:42:01.353Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="qWdvvf3AHA2Tu5K-AvH7" version="21.1.2" type="device">
+<mxfile host="Electron" modified="2023-04-18T08:01:18.940Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="uOMSyH7D1XZDzWTupUEG" version="21.1.2" type="device">
   <diagram name="第 1 页" id="4xjAWqCqZQAXoj54pfHQ">
-    <mxGraphModel dx="1098" dy="670" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1098" dy="1839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="m12ne2t8OxxA_lE06tAF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-1" target="m12ne2t8OxxA_lE06tAF-2">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="m12ne2t8OxxA_lE06tAF-1" target="m12ne2t8OxxA_lE06tAF-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-5" value="通过create函数返回" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" vertex="1" connectable="0" parent="m12ne2t8OxxA_lE06tAF-3">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-5" value="通过create函数返回" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBackgroundColor=none;rounded=0;" parent="m12ne2t8OxxA_lE06tAF-3" vertex="1" connectable="0">
           <mxGeometry x="-0.0741" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-1" value="RenderPipelineAsset" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-1" value="RenderPipelineAsset" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="90" y="450" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-2" target="m12ne2t8OxxA_lE06tAF-12">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="m12ne2t8OxxA_lE06tAF-2" target="m12ne2t8OxxA_lE06tAF-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-2" value="RenderPipeline" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-2" value="RenderPipeline" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="1030" y="450" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-6" value="&lt;h1&gt;RenderPipelineAsset&lt;/h1&gt;&lt;div&gt;继承于接口类IRenderPipelineAsset&lt;/div&gt;&lt;div&gt;负责生成特定的RenderPipeline资源，和管理他们的生命周期（生成渲染的实例和设置无效时销毁已创建的管线）&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-6" value="&lt;h1&gt;RenderPipelineAsset&lt;/h1&gt;&lt;div&gt;继承于接口类IRenderPipelineAsset&lt;/div&gt;&lt;div&gt;负责生成特定的RenderPipeline资源，和管理他们的生命周期（生成渲染的实例和设置无效时销毁已创建的管线）&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="90" y="290" width="470" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-7" value="&lt;h1&gt;RenderPipeline&lt;/h1&gt;&lt;div&gt;继承于抽象类IRenderPipeline&lt;/div&gt;&lt;div&gt;关于unity渲染的核心类，定义了一系列unity如何渲染帧的命令设设置&lt;/div&gt;&lt;div&gt;主要就是重写Render函数，在这个函数中定义一帧去怎么绘画&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-7" value="&lt;h1&gt;RenderPipeline&lt;/h1&gt;&lt;div&gt;继承于抽象类IRenderPipeline&lt;/div&gt;&lt;div&gt;关于unity渲染的核心类，定义了一系列unity如何渲染帧的命令设设置&lt;/div&gt;&lt;div&gt;主要就是重写Render函数，在这个函数中定义一帧去怎么绘画&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="775" y="320" width="375" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-12" target="m12ne2t8OxxA_lE06tAF-19">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;curved=1;labelBackgroundColor=none;fontColor=default;" parent="1" source="m12ne2t8OxxA_lE06tAF-12" target="m12ne2t8OxxA_lE06tAF-19" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1385" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-12" target="m12ne2t8OxxA_lE06tAF-16">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=1;labelBackgroundColor=none;fontColor=default;" parent="1" source="m12ne2t8OxxA_lE06tAF-12" target="m12ne2t8OxxA_lE06tAF-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-12" value="void Render" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-12" value="void Render" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1250" y="455" width="70" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-16" value="Camera[]" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-16" value="Camera[]" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1390" y="535" width="160" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-19" target="m12ne2t8OxxA_lE06tAF-23">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="m12ne2t8OxxA_lE06tAF-19" target="m12ne2t8OxxA_lE06tAF-23" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1700" y="407.5" as="targetPoint" />
+            <mxPoint x="1890" y="408" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-19" value="ScriptableRenderContext" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;" parent="1" source="m12ne2t8OxxA_lE06tAF-19" target="SHS9l1f9AKqWECfSH0F3-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m12ne2t8OxxA_lE06tAF-19" value="ScriptableRenderContext" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1390" y="380" width="160" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-20" target="m12ne2t8OxxA_lE06tAF-24">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="m12ne2t8OxxA_lE06tAF-20" target="m12ne2t8OxxA_lE06tAF-24" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-20" value="&lt;h1&gt;ScriptableRenderContext&lt;/h1&gt;&lt;div&gt;和GPU链接的桥（类似）&lt;/div&gt;&lt;div&gt;在Render函数中调用这个对象的方法去定义管线的绘制&lt;/div&gt;&lt;div&gt;里面都是调用GPU绘画指令的函数，还有一些状态的函数&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="1290" y="230" width="300" height="110" as="geometry" />
+        <mxCell id="m12ne2t8OxxA_lE06tAF-20" value="&lt;h1&gt;ScriptableRenderContext&lt;/h1&gt;&lt;div&gt;和GPU链接的桥（类似）&lt;/div&gt;&lt;div&gt;在Render函数中调用这个对象的方法去定义管线的绘制&lt;/div&gt;&lt;div&gt;里面都是调用GPU绘画指令的函数，还有一些状态的函数&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1070" y="30" width="300" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-23" value="CommandBuffer" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1810" y="380" width="160" height="55" as="geometry" />
+        <mxCell id="m12ne2t8OxxA_lE06tAF-23" value="CommandBuffer" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1390" y="180" width="160" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="m12ne2t8OxxA_lE06tAF-24" target="m12ne2t8OxxA_lE06tAF-20">
+        <mxCell id="m12ne2t8OxxA_lE06tAF-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="m12ne2t8OxxA_lE06tAF-24" target="m12ne2t8OxxA_lE06tAF-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-24" value="&lt;h1&gt;CommandBuffer&lt;/h1&gt;&lt;div&gt;一个里面包含一系列要执行的图形命令的列表&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;可将保存的这些渲染命令列表设置各个点执行，例如摄像机渲染，和光源渲染执行等等，或者立即执行&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;一般的用来拓展管线的一些自定义做法&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="1810" y="230" width="300" height="150" as="geometry" />
+        <mxCell id="m12ne2t8OxxA_lE06tAF-24" value="&lt;h1&gt;CommandBuffer&lt;/h1&gt;&lt;div&gt;一个里面包含一系列要执行的图形命令的列表&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;可将保存的这些渲染命令列表设置各个点执行，例如摄像机渲染，和光源渲染执行等等，或者立即执行&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;一般的用来拓展管线的一些自定义做法&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1590" y="30" width="300" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-27" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;这两个关联性很大，但一个是和GPU通话的桥，一个是我们端写的一系列的命令列表容器，当我们在调用ExcuteCommandBuffer去做一个类似注册CommandBuffer的一个操作的时候，其实就是将我们CommandBuffer的一些例如DrawMesh，DrawRenderer这些命令去注入到ScriptableRenderContext中去执行，相当于我Context写了很多Draw的命令列表，Command也写了很多，然后我调用这个去注入，其实就是将CommandBuffer的命令换成Context的命令注入，两个很多Draw函数命名是可以对应的上的，然后再Submit给GPU提交&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="1480" y="90" width="440" height="110" as="geometry" />
+        <mxCell id="m12ne2t8OxxA_lE06tAF-27" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;这两个关联性很大，但一个是和GPU通话的桥，一个是我们端写的一系列的命令列表容器，当我们在调用ExcuteCommandBuffer去做一个类似注册CommandBuffer的一个操作的时候，其实就是将我们CommandBuffer的一些例如DrawMesh，DrawRenderer这些命令去注入到ScriptableRenderContext中去执行，相当于我Context写了很多Draw的命令列表，Command也写了很多，然后我调用这个去注入，其实就是将CommandBuffer的命令换成Context的命令注入，两个很多Draw函数命名是可以对应的上的，然后再Submit给GPU提交&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1260" y="-110" width="440" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="SHS9l1f9AKqWECfSH0F3-2" target="SHS9l1f9AKqWECfSH0F3-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="SHS9l1f9AKqWECfSH0F3-2" target="SHS9l1f9AKqWECfSH0F3-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-2" value="绘制流程(开始绘制)" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1610" y="367.5" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.644;exitY=0.174;exitDx=0;exitDy=0;exitPerimeter=0;curved=1;dashed=1;dashPattern=12 12;labelBackgroundColor=none;fontColor=default;" parent="1" source="SHS9l1f9AKqWECfSH0F3-6" target="SHS9l1f9AKqWECfSH0F3-17" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1907" y="240" />
+              <mxPoint x="2460" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-31" value="根据摄像机返回的ScriptableCullingParameters去调用context中的Cull方法生成" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;rounded=0;" parent="SHS9l1f9AKqWECfSH0F3-30" vertex="1" connectable="0">
+          <mxGeometry x="-0.1242" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-6" value="Cull" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1810" y="235" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="SHS9l1f9AKqWECfSH0F3-10" target="SHS9l1f9AKqWECfSH0F3-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-10" value="DrawRenderers" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1810" y="372.5" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-14" value="RenderStateBlock" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2150" y="505" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-15" value="FilteringSettings" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2150" y="382.5" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-16" value="DrawingSettings" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2400" y="317.5" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-17" value="CullingResult" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2400" y="260" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="SHS9l1f9AKqWECfSH0F3-18" target="SHS9l1f9AKqWECfSH0F3-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.617;exitY=0.01;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;fontColor=default;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="SHS9l1f9AKqWECfSH0F3-18" target="SHS9l1f9AKqWECfSH0F3-36" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2230" y="343" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2064" y="343" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;" parent="1" source="SHS9l1f9AKqWECfSH0F3-18" target="SHS9l1f9AKqWECfSH0F3-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="SHS9l1f9AKqWECfSH0F3-18" target="SHS9l1f9AKqWECfSH0F3-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-18" value="DrawRenderers" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1990" y="382.5" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-32" value="&lt;h1&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;ScriptableCullingParameters&lt;/font&gt;&lt;/h1&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;调用camera的TryGetCullingParameters方法返回的一个struct，这里面就是一些定义Culling的数据，怎么样去Cull，Cull了什么，阴影的Cull(基于shadowdistance)和返回裁剪平面(一般为6个面的)函数等等&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1980" y="90" width="340" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-34" value="&lt;h1&gt;CullingResults&lt;/h1&gt;&lt;div&gt;已经在context中culling完的返回类型，里面是一堆抽象的物体Culling结果，不过关于光的Culling(在可见光最大值下的屏幕中作用的光源)，可以在这里拿到，还有反射球和顶点光源等等，光的信息可以在CullingResult中得到&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2530" y="187.5" width="290" height="122.5" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-35" value="&lt;h1&gt;DrawingSettings&lt;/h1&gt;&lt;div&gt;这个定义了根据SortingSetting排序的可见物体，并且这些物体中哪些Tag可在当前绘画，哪些不会被当前绘画，这里的Tag是指材质对应shader中的LightMode的Tag，这里也不知道为什么是这样的&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2860" y="324.38" width="290" height="123.75" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="SHS9l1f9AKqWECfSH0F3-36" target="SHS9l1f9AKqWECfSH0F3-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-36" value="SortingSettings" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2150" y="317.5" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="SHS9l1f9AKqWECfSH0F3-38" target="SHS9l1f9AKqWECfSH0F3-35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-38" value="&lt;h1&gt;SortingSettings&lt;/h1&gt;&lt;div&gt;一个Struct，里面是定义如果去队Culling出来的可见物体在一次Draw命令去以什么样的顺序去绘制(这里并不会过滤物体，这里只是去安排他们的顺序)，里面有枚举关于以什么样的规则排序这些物体的绘制顺序，SortingLayer，BackToFront等等&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2530" y="322.5" width="290" height="127.5" as="geometry" />
+        </mxCell>
+        <mxCell id="SHS9l1f9AKqWECfSH0F3-41" value="&lt;h1&gt;FilteringSettings&lt;/h1&gt;&lt;div&gt;一个Struct，由他来对经过前面几个步骤设置好的一堆Obj进行过滤，最后让DrawRenderers命令去绘制这全部Obj或者只绘制符合规则的一部分Obj，例如我们可以通过设置RenderQueueRange去指定这一次的DrawRenderers去绘制RenderQueue符合范围的可见物体&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2530" y="480" width="290" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="h01HjNe_9XvoUJEOqvBI-1" value="&lt;h1&gt;RenderStateBlock&lt;/h1&gt;&lt;div&gt;一个结构体，里面提供了我们规定GPU比较方法的接口，可以根据我们自定的比较方法，去重写这次DrawRenderers命令中GPU的比较方法，例如深度的比较，Alpha混合的方式，模板等等&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2150" y="580" width="290" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
