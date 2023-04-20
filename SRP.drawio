@@ -1,25 +1,24 @@
-<mxfile host="Electron" modified="2023-04-18T08:01:18.940Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="uOMSyH7D1XZDzWTupUEG" version="21.1.2" type="device">
+<mxfile host="Electron" modified="2023-04-20T07:59:36.906Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="ww4Adtc_KfBWjijXugYE" version="21.1.2" type="device">
   <diagram name="第 1 页" id="4xjAWqCqZQAXoj54pfHQ">
-    <mxGraphModel dx="1098" dy="1839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1983" dy="1874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="m12ne2t8OxxA_lE06tAF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="m12ne2t8OxxA_lE06tAF-1" target="m12ne2t8OxxA_lE06tAF-2" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="m12ne2t8OxxA_lE06tAF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-3" target="Ob3NR8QhcAy8DF4Kkk8G-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="475" as="sourcePoint" />
+            <mxPoint x="830" y="480" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="m12ne2t8OxxA_lE06tAF-5" value="通过create函数返回" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBackgroundColor=none;rounded=0;" parent="m12ne2t8OxxA_lE06tAF-3" vertex="1" connectable="0">
           <mxGeometry x="-0.0741" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-1" value="RenderPipelineAsset" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="90" y="450" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="m12ne2t8OxxA_lE06tAF-2" target="m12ne2t8OxxA_lE06tAF-12" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="m12ne2t8OxxA_lE06tAF-2" value="RenderPipeline" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1030" y="450" width="120" height="60" as="geometry" />
+        <mxCell id="m12ne2t8OxxA_lE06tAF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" target="m12ne2t8OxxA_lE06tAF-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="950" y="480" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="m12ne2t8OxxA_lE06tAF-6" value="&lt;h1&gt;RenderPipelineAsset&lt;/h1&gt;&lt;div&gt;继承于接口类IRenderPipelineAsset&lt;/div&gt;&lt;div&gt;负责生成特定的RenderPipeline资源，和管理他们的生命周期（生成渲染的实例和设置无效时销毁已创建的管线）&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="90" y="290" width="470" height="120" as="geometry" />
@@ -157,8 +156,89 @@
         <mxCell id="SHS9l1f9AKqWECfSH0F3-41" value="&lt;h1&gt;FilteringSettings&lt;/h1&gt;&lt;div&gt;一个Struct，由他来对经过前面几个步骤设置好的一堆Obj进行过滤，最后让DrawRenderers命令去绘制这全部Obj或者只绘制符合规则的一部分Obj，例如我们可以通过设置RenderQueueRange去指定这一次的DrawRenderers去绘制RenderQueue符合范围的可见物体&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="2530" y="480" width="290" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="h01HjNe_9XvoUJEOqvBI-1" value="&lt;h1&gt;RenderStateBlock&lt;/h1&gt;&lt;div&gt;一个结构体，里面提供了我们规定GPU比较方法的接口，可以根据我们自定的比较方法，去重写这次DrawRenderers命令中GPU的比较方法，例如深度的比较，Alpha混合的方式，模板等等&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="h01HjNe_9XvoUJEOqvBI-1" value="&lt;h1&gt;RenderStateBlock&lt;/h1&gt;&lt;div&gt;一个结构体，里面提供了我们规定GPU比较方法的接口，可以根据我们自定的比较方法，去重写这次DrawRenderers命令中GPU的比较方法，例如深度的比较，Alpha混合的方式，模板等等&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="2150" y="580" width="290" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-2" target="Ob3NR8QhcAy8DF4Kkk8G-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-2" target="Ob3NR8QhcAy8DF4Kkk8G-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-2" value="单个物体渲染" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="1920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-3" value="RenderPipelineAsset" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-4" value="RenderPipeline" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-5" target="Ob3NR8QhcAy8DF4Kkk8G-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-5" value="渲染管线" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-7" target="Ob3NR8QhcAy8DF4Kkk8G-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-7" value="Shader" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-8" target="Ob3NR8QhcAy8DF4Kkk8G-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-8" value="Material" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="2150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-11" value="MaterialPropertyBlock" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="2150" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-13" value="&lt;h1&gt;MaterialPropertyBlock&lt;/h1&gt;&lt;div&gt;里面设置了一块，多个值需要在材质中去应用，可以在这里设置，并在Graphic.DrawMesh和Renderer.SetPropertyBlock两个入口中去应用，这个数据结构针对的就是当多个网格，同样的材质，需要在某个网格去改变其中一个值，或者添加一些值，就可以传入这个结构，去改单个的，但是这样会破坏SRP Batch&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1990" width="375" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-14" target="Ob3NR8QhcAy8DF4Kkk8G-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-14" target="Ob3NR8QhcAy8DF4Kkk8G-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685" y="1570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-14" value="ContantBuffer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-16" value="UnityPerMaterial" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="1430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-19" value="UnityPerDraw" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="1540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-20" target="Ob3NR8QhcAy8DF4Kkk8G-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-20" target="Ob3NR8QhcAy8DF4Kkk8G-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="1690" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="325" y="1690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-20" value="数据" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="265" y="1540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ob3NR8QhcAy8DF4Kkk8G-24" target="Ob3NR8QhcAy8DF4Kkk8G-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="1690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-24" value="Texture" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob3NR8QhcAy8DF4Kkk8G-26" value="Sampler" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="1660" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -37,7 +37,8 @@ public partial class CameraRender
     void DrawVisibleGeometry()
     {
         SortingSettings sortingSettings = new SortingSettings(camera) { criteria = SortingCriteria.CommonOpaque };
-        DrawingSettings drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings);
+        DrawingSettings drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings)
+            { enableDynamicBatching = false, enableInstancing = true };
         FilteringSettings filteringSettings = new FilteringSettings(RenderQueueRange.opaque);
         
         context.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
