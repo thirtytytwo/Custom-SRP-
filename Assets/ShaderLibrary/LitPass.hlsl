@@ -1,6 +1,9 @@
-#ifndef CUSTOM_UNLIT_PASS_INCLUDE
-#define CUSTOM_UNLIT_PASS_INCLUDE
+#ifndef CUSTOM_LIT_PASS_INCLUDE
+#define CUSTOM_LIT_PASS_INCLUDE
 #include "Common.hlsl"
+#include "Surface.hlsl"
+#include "Light.hlsl"
+#include "Lighting.hlsl"
 
 /*CBUFFER_START(UnityPerMaterial) //SRPBatch
 half4 _BaseColor;
@@ -11,7 +14,6 @@ SAMPLER(sampler_BaseMap);
 UNITY_INSTANCING_BUFFER_START(UnityPerMaterial) //GPUInstancing
     UNITY_DEFINE_INSTANCED_PROP(half4, _BaseColor)
     UNITY_DEFINE_INSTANCED_PROP(float4, _BaseMap_ST)
-    UNITY_DEFINE_INSTANCED_PROP(float, _Cutoff)
 UNITY_INSTANCING_BUFFER_END(UnityPerMaterial)
 struct a2v
 {
@@ -28,7 +30,7 @@ struct v2f
     float2 uv: TEXCOORD0;
     UNITY_VERTEX_INPUT_INSTANCE_ID//GPUInstancing
 };
-v2f UnlitPassVertex(a2v i)
+v2f LitPassVertex(a2v i)
 {
     v2f o;
     #pragma region GPUInstancing
@@ -40,18 +42,17 @@ v2f UnlitPassVertex(a2v i)
     o.uv = i.uv;
     return o;
 };
-half4 UnlitPassFragment(v2f i):SV_TARGET
+half4 LitPassFragment(v2f i):SV_TARGET
 {
     #pragma region GPUInstancing
     UNITY_SETUP_INSTANCE_ID(i);
     half3 baseMap = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, i.uv);
     half4 baseColor = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseColor);
     #pragma endregion
-    half4 baseCol = half4(baseMap.rgb, baseMap.r);
-    half4 result = baseColor * baseCol;
-    #ifdef _CLIPPING
-    clip(result.a - UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _Cutoff));
-    #endif
-    return result;
+    Surface surface;
+    surface.normal = normalize(i.normalWS);
+    surface.color = baseColor.rgb;
+    surface.alpha = baseMap.r;
+    return baseColor + half4(GetLighting(surface), 1.0f);
 }
 #endif

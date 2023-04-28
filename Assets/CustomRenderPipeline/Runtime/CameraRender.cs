@@ -4,10 +4,17 @@ using UnityEngine.Rendering;
 
 public partial class CameraRender
 {
-    private static ShaderTagId unlitShaderTagId = new ShaderTagId("LYCTest");
+    private static ShaderTagId[] ShaderTagIds =
+    {
+        new ShaderTagId("SRPUnlit"),
+        new ShaderTagId("SRPLit")
+    };
 
     private ScriptableRenderContext context;
     private Camera camera;
+    private Lighting Light = new Lighting();
+
+    private bool IsEnableGPUInstancing;
     
     private const string bufferName = "Render Camera";
     private CommandBuffer buffer = new CommandBuffer { name = bufferName };
@@ -15,10 +22,11 @@ public partial class CameraRender
     //Settings
     private CullingResults cullingResults;
     
-    public void Render(ScriptableRenderContext context, Camera camera)
+    public void Render(ScriptableRenderContext context, Camera camera, bool isEnableGPUInstancing)
     {
         this.camera = camera;
         this.context = context;
+        this.IsEnableGPUInstancing = isEnableGPUInstancing;
 
         PrepareForSceneWindow();
         PrepareBuffer();
@@ -27,6 +35,7 @@ public partial class CameraRender
             return;
         }
         Setup();
+        Light.Setup(this.context, this.cullingResults);
         DrawVisibleGeometry();
         DrawUnsupportedGeometry();
         DrawGizmos();
@@ -37,8 +46,9 @@ public partial class CameraRender
     void DrawVisibleGeometry()
     {
         SortingSettings sortingSettings = new SortingSettings(camera) { criteria = SortingCriteria.CommonOpaque };
-        DrawingSettings drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings)
-            { enableDynamicBatching = false, enableInstancing = true };
+        DrawingSettings drawingSettings = new DrawingSettings(ShaderTagIds[0], sortingSettings)
+            { enableDynamicBatching = false, enableInstancing = this.IsEnableGPUInstancing };
+        drawingSettings.SetShaderPassName(1, ShaderTagIds[1]);
         FilteringSettings filteringSettings = new FilteringSettings(RenderQueueRange.opaque);
         
         context.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
