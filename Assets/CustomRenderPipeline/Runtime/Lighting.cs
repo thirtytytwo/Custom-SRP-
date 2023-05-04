@@ -19,11 +19,14 @@ public class Lighting
         dirLightDirections = new Vector4[maxCount];
 
     private CullingResults _cullingResults;
-    public void Setup(ScriptableRenderContext context, CullingResults cullingResults)
+    private Shadows shadows = new Shadows();
+    public void Setup(ScriptableRenderContext context, CullingResults cullingResults, ShadowSetting shadowSetting)
     {
         _cullingResults = cullingResults;
         buffer.BeginSample(bufferName);
+        shadows.Setup(context,cullingResults,shadowSetting);
         SetupLights();
+        shadows.Render();
         buffer.EndSample(bufferName);
         context.ExecuteCommandBuffer(buffer);
         buffer.Clear();
@@ -33,6 +36,7 @@ public class Lighting
     {
         dirLightColors[index] = light.finalColor;
         dirLightDirections[index] = -light.localToWorldMatrix.GetColumn(2);
+        shadows.ReserveDirectionalShadows(light.light, index);
         //Debug.Log(light.localToWorldMatrix);
     }
 
@@ -51,5 +55,10 @@ public class Lighting
         buffer.SetGlobalInt(dirLightCountID, visibleLights.Length);
         buffer.SetGlobalVectorArray(dirLightColorID, dirLightColors);
         buffer.SetGlobalVectorArray(dirLightDirectionID, dirLightDirections);
+    }
+
+    public void Cleanup()
+    {
+        shadows.Cleanup();
     }
 }

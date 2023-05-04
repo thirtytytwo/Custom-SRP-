@@ -53,6 +53,6 @@ half4 LitPassFragment(v2f i):SV_TARGET
     surface.normal = normalize(i.normalWS);
     surface.color = baseColor.rgb;
     surface.alpha = baseMap.r;
-    return baseColor + half4(GetLighting(surface), 1.0f);
+    return half4(GetLighting(surface) * baseColor.rgb, 1.0f);
 }
 #endif

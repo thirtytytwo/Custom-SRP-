@@ -5,8 +5,9 @@ using UnityEngine.Rendering;
 public class CustomRenderPipelineAsset : RenderPipelineAsset
 {
     public bool isEnableSRPBatch, isEnableGPUInstancing;
+    [SerializeField] private ShadowSetting shadows = default;
     protected override RenderPipeline CreatePipeline()
     {
-        return new CustomRenderPipeline(isEnableSRPBatch, isEnableGPUInstancing);
+        return new CustomRenderPipeline(isEnableSRPBatch, isEnableGPUInstancing, shadows);
     }
 }
